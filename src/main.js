@@ -8,7 +8,12 @@ import store from './store'
 import { TiptapVuetifyPlugin } from 'tiptap-vuetify'
 import 'tiptap-vuetify/dist/main.css'
 
+import '@mdi/font/css/materialdesignicons.css'
 
+import MenuIcon from 'vue-material-design-icons/Menu.vue';
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import '@mdi/font/css/materialdesignicons.css'
+Vue.component('menu-icon', MenuIcon);
 
 //Vuetify Config
 import Vuetify from 'vuetify'
@@ -23,11 +28,28 @@ Vue.use(TiptapVuetifyPlugin, {
   iconsGroup: 'md'
 })
 
+// export default new Vuetify()
+
 Vue.config.productionTip = false
 
 new Vue({
   router,
   store,
-  vuetify: new Vuetify(),
+  vuetify: new Vuetify({
+    icons: {
+      iconfont: 'mdiSvg'// 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4'
+    },
+    theme: {
+      dark: false,
+    },
+    themes: {
+      light: {
+        primary: "#4682b4",
+        secondary: "#b0bec5",
+        accent: "#8c9eff",
+        error: "#b71c1c",
+      },
+    },
+  }),
   render: h => h(App)
 }).$mount('#app')
