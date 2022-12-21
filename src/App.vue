@@ -12,6 +12,8 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@200;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@200;800;900&display=swap');
 #app {
   font-family: Ubuntu,sans-serif;
   line-height: 1.5;
@@ -19,6 +21,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-family: 'Chivo Mono', monospace;
 }
 
 /* body {

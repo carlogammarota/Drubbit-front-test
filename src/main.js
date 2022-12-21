@@ -13,6 +13,8 @@ import '@mdi/font/css/materialdesignicons.css'
 import MenuIcon from 'vue-material-design-icons/Menu.vue';
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '@mdi/font/css/materialdesignicons.css'
+import 'slick-carousel/slick/slick.css';
+// import 'https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css';
 Vue.component('menu-icon', MenuIcon);
 
 //Vuetify Config
@@ -37,10 +39,10 @@ new Vue({
   store,
   vuetify: new Vuetify({
     icons: {
-      iconfont: 'mdiSvg'// 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4'
+      iconfont: 'mdiSvg' || 'fa'// 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4'
     },
     theme: {
-      dark: false,
+      // dark: false,
     },
     themes: {
       light: {

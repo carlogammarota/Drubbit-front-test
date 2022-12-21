@@ -1,12 +1,12 @@
 <template>
   <v-card
-    class="mx-auto my-12 product"
+    class="mx-auto product hover"
     max-width="280"
     
     
   >
   <div class="discount rounded-lg">
-    <p class="discount-text">-20%</p>
+    <p class="discount-text">-{{ product.variants[0].pvPrice.discountPct    }}%</p>
   </div>
   <!-- {{ product }} -->
     <template slot="progress">
@@ -62,7 +62,7 @@
 
    
 
-    <div class="text-xs-center py-2 my-2">
+    <div class="text-xs-center py-2 mb-2">
       <!-- <v-btn
         color="" 
         text
@@ -114,22 +114,31 @@ import { mdiCart } from '@mdi/js';
   }
 </script>
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@200;800;900&display=swap');
 .discount-text {
+    font-family: 'Chivo Mono', monospace !important;
+
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
-    padding-top: 8px;
+    // padding-top: 8px;
+    position: absolute;
+    top: 2px;
+    left: 1px;
+
 }
 .discount {
+  
     background-color: #9980ce;
-    height: 45px;
-    width: 60px;
+    height: 50px;
+    width: 90px;
 }
 .slick-prev:before, .slick-next:before { 
     color:red !important;
 }
 .product{
     cursor: pointer;
+    max-height: 500px;
 }
 .divider {
     // height: 0.2px;
@@ -137,6 +146,7 @@ import { mdiCart } from '@mdi/js';
     // background-color: red;
     border-color: #e0e0e0 !important;
     opacity: 0.5;
+    margin: 0;
     // font-weight: 800;
     //    height: 50%;
 }
@@ -154,6 +164,7 @@ import { mdiCart } from '@mdi/js';
     text-align: left;
     padding: 18px;
     padding-top:0;
+    min-height: 90px;
 }
 .new-price {
     padding-top: 0 !important;

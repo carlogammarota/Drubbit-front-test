@@ -1,7 +1,7 @@
 <template>
   <div >
     <!-- {{ relatedProducts }} -->
-    <v-col sm="9" class="ma-auto carousel-styles">
+    <v-col lg="11" cols="12" class="ma-auto carousel-styles ">
         <vue-slick-carousel
             :arrows="true"
             v-bind="settings"
@@ -55,7 +55,7 @@
     data(){
         return {
             settings: {
-                arrows: true,
+                arrows: false,
                 "dots": false   ,
                 "infinite": true,
                 "centerMode": false,
@@ -81,6 +81,8 @@
   }
 </script> 
 <style>
+
+
 .carousel-styles{
     position: relative;
 }
