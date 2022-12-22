@@ -42,12 +42,14 @@ new Vue({
       iconfont: 'mdiSvg' || 'fa'// 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4'
     },
     theme: {
-      // dark: false,
+      // dark: true,
+      disable: false
     },
     themes: {
       light: {
         primary: "#4682b4",
-        secondary: "#b0bec5",
+        secondary: "#461e8c",
+        template: "#461e8c",
         accent: "#8c9eff",
         error: "#b71c1c",
       },

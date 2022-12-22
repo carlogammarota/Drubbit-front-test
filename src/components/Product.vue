@@ -6,7 +6,7 @@
         :asNavFor="$refs.c1"
         :slidesToShow="8"
         :focusOnSelect="true"
-        class="miniPreview"
+        class="miniPreview mb-24"
         :touchMove="false"
         v-bind="miniSettings"
         >
@@ -167,6 +167,10 @@
 
     .miniPreview .slick-track{
         margin-left: 0px;
+    }
+
+    .miniPreview .slick-slide {
+        background: white;
     }
 
 

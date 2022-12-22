@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-change">
+  <div class="bg-change single-product pb-10">
     <img alt="Vue logo" src="../assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 
@@ -114,9 +114,8 @@
                   </button>
                 </div>
                 
-                <v-row no-gutters>
+              <v-row no-gutters>
                 <v-col
-                  v-for="n in 1"
                   :key="n"
                   cols="12"
                   sm="12"
@@ -126,10 +125,93 @@
                     outlined
                     tile
                   >
-                    <p class="text-left last-available pl-2 ">Última disponible!</p>
+                    <p class="text-left last-available pl-2 subtitle-2 grey--text lighten-5">Última disponible!</p>
                   </v-card>
                 </v-col>
               </v-row>
+              <v-row no-gutters>
+                <v-col
+                  :key="n"
+                  cols="12"
+                  sm="12"
+                >
+                  <v-card
+                    class="pa-2"
+                    outlined
+                    tile
+                  >
+                  <v-btn block class="rounded-xl py-6"  color="primary">
+                    <span class="material-icons pr-2">shopping_cart</span>COMPRAR AHORA
+                  </v-btn>
+                  </v-card>
+                </v-col>
+              </v-row>
+              <v-divider class="mt-4 mb-4" light></v-divider>
+      
+              <v-row no-gutters>
+                <v-col
+                  :key="n"
+                  cols="12"
+                  lg="2"
+                   class="icon-max-w"
+                >
+                  <v-card
+                    class="pa-2"
+                    outlined
+                    tile
+                  >
+                  <span class='material-icons m-4 float-left pr-4 pt-4 pb-4 pl-4 rounded-lg shipDetail mr-4 '>local_shipping</span>
+                  </v-card>
+                </v-col>
+                <v-col
+                  :key="n"
+                  cols="9"
+                  md="10"
+                  lg="8"
+                >
+                  <v-card
+                    class="pa-2"
+                    outlined
+                    tile
+                  >
+                  <p class="subtitle-1 text-left">Retiro gratis en nuestro local.
+Rico 640, Dolores, Prov de Buenos Aires </p>
+                    
+                  </v-card>
+                </v-col>
+              </v-row>
+              <v-row no-gutters>
+                <v-col
+                  :key="n"
+                  cols="2"
+                  class="icon-max-w"
+                >
+                  <v-card
+                    class="pa-2 "
+                    outlined
+                    tile
+                  >
+                  <span class='material-icons m-4 float-left pr-4 pt-4 pb-4 pl-4 rounded-lg shipDetail mr-4 '>shopping_basket</span>
+                  </v-card>
+                </v-col>
+                <v-col
+                  :key="n"
+                  cols="9"
+                >
+                  <v-card
+                    class="pa-2"
+                    outlined
+                    tile
+                  >
+                  <p class="subtitle-1 text-left">Envío a domicilio. Consultenós el costo a su localidad. 
+                    <span class="caption">Realizamos envíos a Dolores y zona con nuestra propia flota de camiones. LLegamos a Castelli, Lezama, Pila, Chascomús, Gral. Guido, Maipú, Gral. Conesa, Lavalle y el Partido de la Costa. Por otros destinos consulte antes de realizar su compra. </span>
+                  </p> 
+                    
+                  </v-card>
+                </v-col>
+              </v-row>
+              
+              
 
 
             </v-card>
@@ -222,19 +304,28 @@ export default {
 <style>
 /* Product Quantity */
 .wrapper {
-	 height: 40px;
+	 height: 58px;
 	display: flex;
 }
 .quantity {
+  font-size: 30px !important;
   -webkit-appearance: none;
   border: none;
   text-align: center;
-    width: 50px;
+    width: 58px;
  
   font-size: 16px;
   color: #43484D;
   font-weight: 300;
 	border: 1px solid #E1E8EE;
+}
+
+.carousel-styles .slick-track {
+  background-color: whitesmoke;
+}
+
+.Preview .slick-track {
+  background-color: white;
 }
 
 .last-available {
@@ -244,7 +335,7 @@ export default {
 
 .btn {
 	/* border: 1px solid black; */
-  width: 50px;
+  width: 58px;
   background-color: white;
 /*   border-radius: 6px; */
   cursor: pointer;
@@ -287,12 +378,13 @@ input:focus {
 .slick-arrow {
     display: none !important;
 }
-.theme--light ul li{
+.single-product .theme--light ul li{
   list-style-type: none !important;
   float: left;
   padding-right: 0;
 }
-.theme--light ul li a{
+
+.single-product .theme--light ul li a{
   padding-left: 10px;
   padding-right: 10px;
   text-decoration: none;
@@ -323,5 +415,14 @@ input:focus {
 }
 .v-divider {
   opacity: 10%;
+}
+.shipDetail {
+  border: solid 1px black !important;
+}
+.caption-style {
+  font-size: 10px;
+}
+.icon-max-w {
+  max-width: 80px !important;
 }
 </style>

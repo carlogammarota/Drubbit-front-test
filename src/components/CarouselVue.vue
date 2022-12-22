@@ -82,6 +82,10 @@
 </script> 
 <style>
 
+.slick-slide {
+    background: whitesmoke;
+    
+}
 
 .carousel-styles{
     position: relative;
@@ -109,13 +113,30 @@
 }
 .slick-initialized .slick-slide[data-v-e4caeaf8] {
     padding: 10px; 
+    /* background-color: white; */
 }
+/* .carousel-styles .slick-initialized .slick-slide[data-v-e4caeaf8] {
+    background-color: white;
+} */
 .slick-slider{
      width: 96%; 
      margin: auto;
+     
 }
+
+.Preview .slick-slide{
+    background-color: white;
+}
+.Preview .slick-track {
+    background: whitesmoke;
+}
+
+/* .Preview .slick-track {
+    background: whitesmoke;
+} */
 .variable-width .slick-slide {
     width: 475px;
+    
  }
 
  button.slick-prev:before, button.slick-next:before {
