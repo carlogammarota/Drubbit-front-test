@@ -1,6 +1,6 @@
 <template>
   <div class="bg-change single-product pb-10">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 
     <v-col  class="ma-auto carousel-styles bg-change" >
@@ -56,10 +56,11 @@
                   active-class=" accent-4 white--text"
                   column
                 >
-                  <v-chip class="chip-style">SKU STA00307</v-chip>
+                  <v-chip class="chip-style">{{ product.variants[0].sku }}</v-chip>
                 </v-chip-group>
               </v-card-text>
-              <v-list-item-subtitle class="text-left drop_red text-break mark pb-8">STANLEY </v-list-item-subtitle>
+              
+              <v-list-item-subtitle class="text-left drop_red text-break mark pb-8">{{ product.brand.name }} </v-list-item-subtitle>
               <!-- <v-list-item-subtitle class="text-left pl-4 drop_red text-break mark">STANLEY </v-list-item-subtitle> -->
               <v-card-text class="old-price text-left mt-0 py-0 pl-0">
 
@@ -125,7 +126,7 @@
                     outlined
                     tile
                   >
-                    <p class="text-left last-available pl-2 subtitle-2 grey--text lighten-5">Última disponible!</p>
+                    <p v-if="product.variants[0].stock.qty == 1" class="text-left last-available pl-2 subtitle-2 grey--text lighten-5">Última disponible!</p>
                   </v-card>
                 </v-col>
               </v-row>
@@ -222,6 +223,7 @@ Rico 640, Dolores, Prov de Buenos Aires </p>
       </v-col> 
 
     <br>
+
     <h2 class="font-weight-medium pb-2 font-4 text-uppercase text-decoration-underline font-weight-normal red--text">Tambien te puede interesar</h2>
     <CarouselVue :relatedProducts="relatedProducts"></CarouselVue>
 
@@ -302,6 +304,9 @@ export default {
 }
 </script>
 <style>
+.v-breadcrumbs__divider {
+  color: #1976d2;
+}
 /* Product Quantity */
 .wrapper {
 	 height: 58px;

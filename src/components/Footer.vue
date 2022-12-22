@@ -1,6 +1,6 @@
 <template>
-    <div class="footer">
-        <v-row no-gutters class="mt-16">
+    <div class="footer ">
+        <v-row no-gutters class="mt-16 footer-row">
             <v-col
                 :key="n"
                 cols="12"
@@ -171,6 +171,22 @@ ul {
     
     width: 100%;
 }
+
+
+.footer-row {
+        padding:0 !important;
+        margin-left:24px !important;
+        margin-right:24px !important;
+}
+@media (max-width: 300px) {
+    .footer-row {
+        padding:0 !important;
+        margin:0 !important;
+    }
+}
+
+
+
 .background {
     background-color: #461e8c !important;
 }
