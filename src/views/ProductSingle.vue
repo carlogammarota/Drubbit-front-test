@@ -113,6 +113,24 @@
                     +
                   </button>
                 </div>
+                
+                <v-row no-gutters>
+                <v-col
+                  v-for="n in 1"
+                  :key="n"
+                  cols="12"
+                  sm="12"
+                >
+                  <v-card
+                    class="pa-2"
+                    outlined
+                    tile
+                  >
+                    <p class="text-left last-available pl-2 ">Última disponible!</p>
+                  </v-card>
+                </v-col>
+              </v-row>
+
 
             </v-card>
           </v-col>
@@ -204,7 +222,7 @@ export default {
 <style>
 /* Product Quantity */
 .wrapper {
-	 height: 50px;
+	 height: 40px;
 	display: flex;
 }
 .quantity {
@@ -219,16 +237,31 @@ export default {
 	border: 1px solid #E1E8EE;
 }
 
+.last-available {
+  /* color: rgb(154, 154, 154); */
+  color: rgb(37, 37, 37);
+}
+
 .btn {
-	border: 1px solid #E1E8EE;
+	/* border: 1px solid black; */
   width: 50px;
-  background-color: #E1E8EE;
+  background-color: white;
 /*   border-radius: 6px; */
   cursor: pointer;
+  border: 1px solid black;
+  border-radius: 10%;
 }
 button:focus,
 input:focus {
   outline:0;
+}
+
+.quantity {
+  border: 1px solid black;
+  border-radius: 10%;
+  margin-left: 5px;
+  margin-right: 5px;
+  
 }
 
 
@@ -287,5 +320,8 @@ input:focus {
 
 .slick-list{
   background: white;
+}
+.v-divider {
+  opacity: 10%;
 }
 </style>
