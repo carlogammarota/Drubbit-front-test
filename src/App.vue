@@ -75,12 +75,6 @@
         </div>
         </v-col>
       </v-row>
-      <!-- <div class="text-left mt-0">
-        <img class="mt-0 mx-4 mt-4" src="https://materialesbasualdo.com.ar/uploads/configs/site_logo_1640802762678.png" alt=""></img>
-      </div>
-      
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> -->
     </nav>
     <router-view/>
     <Footer></Footer>

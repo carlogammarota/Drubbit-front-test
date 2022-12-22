@@ -1,10 +1,7 @@
 <template>
   <div class="bg-change single-product pb-10">
-    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 
     <v-col  class="ma-auto carousel-styles bg-change" >
-      <!-- <div class="grey lighten-5"> -->
         <v-col  lg="11" cols="12" class="ma-auto ProductSingle">
           <v-row no-gutters>
           <v-col
@@ -30,12 +27,6 @@
               tile
               class="pl-8 description"
             >
-              <!-- One of three columns -->
-              <!-- <v-breadcrumbs :items="items">
-                <template v-slot:divider>
-                  /
-                </template>
-              </v-breadcrumbs> -->
               <v-breadcrumbs :items="items" divider="/" id="breadcrumbs" class="pt-8">
                 <template v-slot:item="{ item }">
                   <v-breadcrumbs-item class="pl-0 ml-0" :href="item.href" @click="showSelectedRow2(item)">
@@ -241,8 +232,6 @@ import ProductSingle from '@/components/Product'
 import axios from 'axios'
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
   import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-  // import 'https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css'
-  // import 'https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css'
 export default {
   name: 'HomeView',
   data(){
@@ -285,14 +274,12 @@ export default {
   components: {
     CarouselVue,
     ProductSingle
-    // HelloWorld
   },
   mounted(){
     axios
       .get('http://localhost:3000/product')
       .then(response => {
         
-        // this.images.push(response.data.data.product.images[0].originalUrl)
         this.images = response.data.data.product.images
         this.items[1].text = response.data.data.product.categories[0].name
         this.items[2].text = response.data.data.product.categories[1].name

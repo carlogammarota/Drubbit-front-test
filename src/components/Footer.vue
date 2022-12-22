@@ -6,9 +6,7 @@
                 cols="12"
                 md="6"
             >
-                    
-                    
-
+                  
                 <div class="text-left pl-10 pb-8">
                     <img src="https://materialesbasualdo.com.ar/uploads/configs/site_logo_1640802762678.png" alt=""></img>
                 </div>
@@ -91,13 +89,10 @@
                 
             </v-col>
         </v-row>
-        <!-- <v-divider class="mx-2 divider lighten-2"></v-divider> -->
         <div class="spacing"></div>
         <div class="copy py-4">
             <p class="">Todos los derechos reservados © Basulado</p>
         </div>
-        
-        <!-- <v-divider class="mx-2  black" ></v-divider> -->
     </div>
 </template>
 <script>

@@ -1,6 +1,5 @@
 <template>
   <div >
-    <!-- {{ relatedProducts }} -->
     <v-col lg="11" cols="12" class="ma-auto carousel-styles ">
         <vue-slick-carousel
             :arrows="true"
@@ -10,31 +9,16 @@
             class=""
             
         >
-        
-            <!-- <div>1</div> -->
             <div v-for="item in relatedProducts">
                 <Card :product="item"></Card>
             </div>
-
-            
-            <!-- <div v-for="item in relatedProducts">
-                <Card :product="item"></Card>
-            </div> -->
-            <!-- <div v-for="item in relatedProducts">
-                <Card :product="item"></Card>
-            </div> -->
-
-          /> 
-          <!-- <div v-for="item in 3">
-            asd
-          </div> -->
           <div class="buttons-action">
            
           </div>
         </vue-slick-carousel>
         <button @click="showNext" class="next "><span class="material-icons buttons-action"> arrow_circle_right </span> </button>
             
-            <button @click="showPrev" class="back "><span class="material-icons buttons-action"> arrow_circle_left </span> </button>
+        <button @click="showPrev" class="back "><span class="material-icons buttons-action"> arrow_circle_left </span> </button>
     </v-col>
     
   </div>
